@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <style>
+      .right-side {
+        background-image: url("images/pexels-photo-196647.jpeg"),
+          linear-gradient(rgba(249, 39, 71, 0.111), rgba(17, 17, 17, 0.5));
+      }
+    </style>
+  </head>
+  <body class="container">
+    <div class="left-side">
+      <div>
+        <p class="uppercase">Student, Researcher, Tinkerer</p>
+      </div>
+      <div class="id-statement">
+        <a href="/"><h1 class="bigwords">Alan Xian</h1></a>
+      </div>
+      <div>
+        <nav>
+          <ul class="nav uppercase">
+            <li><a href="/work">My Works</a></li>
+            <li><a href="/cool-services">Services I Use</a></li>
+            <li><a href="/about-me">About Me</a></li>
+            <li>
+              <a href="/contact"><b>Contact</b></a>
+            </li>
+            <li><a href="/sitemap">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="right-side contact-form">
+      <h1>Let's Get in Touch!</h1>
+      <form action="post">
+        <ul>
+          <span>
+            <li>
+              <input
+                type="text"
+                placeholder="Your Name"
+                name="name"
+                id="name"
+                size="28px"
+              />
+            </li>
+          </span>
+          <span>
+            <li>
+              <input
+                type="text"
+                placeholder="Email"
+                name="email"
+                id="email"
+                size="28px"
+              />
+            </li>
+          </span>
+          <span>
+            <li>
+              <textarea
+                placeholder="Your Comments"
+                name="message"
+                id="message"
+                cols="25"
+                rows="5"
+              ></textarea>
+            </li>
+          </span>
+        </ul>
+        <br />
+        <div class="button">
+          <button type="submit">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
