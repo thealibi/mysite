@@ -4,16 +4,140 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sitemap</title>
+    <title>alanx.me | Sitemap</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      media="handheld, only screen and (max-device-width: 800px)"
+      href="styles/phone.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <style>
+      .container {
+        background-image: url("images/lady-map.jpg"),
+          linear-gradient(rgba(249, 39, 71, 0.111), rgba(17, 17, 17, 0.5));
+      }
+    </style>
   </head>
-  <body>
-    <h1>Sitemap</h1>
-    <ul>
-      <li><a href="/">Homepage</a></li>
-      <li><a href="/work.html">My Work</a></li>
-      <li><a href="/about-me.html">About Me</a></li>
-      <li><a href="/tools.html">Tools I Use</a></li>
-      <li><a href="/contact.html">Contact Me</a></li>
-    </ul>
+   <body class="container ">
+    <div class="left-side" id="left">
+      <div class="sidebar">
+      <div>
+        <p class="uppercase italics"> <span id="student"> Student</span>, <span id="researcher">Researcher</span>, <span id="tinkerer">Tinkerer</span></p>
+      </div>
+      <div class="id-statement">
+        <a href="/"><h1 class="bigwords">Alan Xian</h1></a>
+      </div>
+      <div>
+        <nav>
+          <ul class="nav uppercase">
+            <li ><a href="/work">Experience</a></li>
+            <li><a href="/tools">Tools I Use</a></li>
+            <li><a href="/about-me">About Me</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/sitemap"><b>Sitemap</b></a></li>
+            <li><button id="dark-toggle"> Change Theme</button> </a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+          </div>
+
+    <div class="right-side sitemap">
+        <ol >
+          <li>
+            <a href="/index.html">Home</a>
+          </li>
+          <li>
+            <a href="/work.html">Experience</a>
+          </li>
+          <li>
+            <a href="/tools.html">Tools I Use</a>
+          </li>
+                    <li>
+            <a href="/about-me.html">About Me</a>
+          </li>
+               <li>
+            <a href="/contact.html">Contact Me</a>
+          </li>
+        </ol>
+        </div>
   </body>
+    <script>
+    function changeText(text){
+      const student = document.getElementById("student")
+      const researcher= document.getElementById("researcher")
+      const tinkerer= document.getElementById("tinkerer")
+
+      if (text == "student"){
+        student.innerHTML = "Procrastinator"
+      }
+      else if(text == "researcher"){
+        researcher.innerHTML = "Web Addict"
+      }
+      else if(text == "tinkerer"){
+        tinkerer.innerHTML = "Breaker of Things"
+      }
+    }
+
+    function changeBackText(text){
+      const student = document.getElementById("student")
+      const researcher= document.getElementById("researcher")
+      const tinkerer= document.getElementById("tinkerer")
+
+      if (text == "procrastinator"){
+        student.innerHTML = "Student"
+      }
+      else if(text == "web addict"){
+        researcher.innerHTML = "Researcher"
+      }
+      else if(text == "breaker of things"){
+        tinkerer.innerHTML = "Tinkerer"
+      }
+    }
+
+
+    function darkModeToggle(){
+      const left = document.getElementById("left");
+      // const right = document.querySelector(".sitemap");
+      // right.classList.toggle("dark-mode-semi"); 
+      left.classList.toggle("dark-mode-full");
+      
+    }
+
+    function validate(){
+      console.log("hi")
+      const value = document.getElementById("captcha").value
+      console.log(value)
+      if (value=='') {}
+      else if(parseInt(value)=="8"){
+        window.alert("Correct! Continue On!")
+      }
+      else{
+        window.alert("Wrong!")
+      }
+    }
+    document.getElementById("student").onmouseover = function(){
+      changeText("student")
+    }
+        document.getElementById("student").onmouseleave = function(){
+      changeBackText("procrastinator")
+    }
+        document.getElementById("researcher").onmouseover = function(){
+      changeText("researcher")
+    }
+        document.getElementById("researcher").onmouseleave = function(){
+      changeBackText("web addict")
+    }
+            document.getElementById("tinkerer").onmouseover = function(){
+      changeText("tinkerer")
+    }
+        document.getElementById("tinkerer").onmouseleave = function(){
+      changeBackText("breaker of things")
+    }
+    document.getElementById("dark-toggle").onclick = function(){
+      darkModeToggle();
+    }
+  </script>
 </html>

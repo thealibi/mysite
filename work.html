@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Work</title>
+    <title>alanx.me | My Work</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" id="stylesheet" href="styles/style.css">
     <link rel='stylesheet' media='handheld, only screen and (max-device-width: 800px)' href='styles/phone.css'>
 
@@ -13,36 +14,36 @@
                 background-image: url("images/road.jpg"),
           linear-gradient(rgba(249, 39, 71, 0.111), rgba(17, 17, 17, 0.5));
     }
+
     </style>
   </head>
-  <body class="container">
-    <div class="left-side">
+  <body class="container ">
+    <div class="left-side" id="left">
+      <div class="sidebar">
       <div>
-        <p class="uppercase italics">Student, Researcher, Tinkerer</p>
+        <p class="uppercase italics"> <span id="student"> Student</span>, <span id="researcher">Researcher</span>, <span id="tinkerer">Tinkerer</span></p>
       </div>
       <div class="id-statement">
-        <a href="/"><h1 class="bigwords">Alan Xian</h1></a>
+        <a href="/"><h1 class="bigwords"> Alan Xian</h1></a>
       </div>
       <div>
         <nav>
           <ul class="nav uppercase">
-            <li><a href="/work"><b>Experience</b></a></li>
+            <li ><a href="/work"><b>Experience</b></a></li>
             <li><a href="/tools">Tools I Use</a></li>
             <li><a href="/about-me">About Me</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="/sitemap">Sitemap</a></li>
-            <li><span class="dark-mode"> <a href="">
-                <input type="checkbox" id="dark-mode-input">
-                <label class="custom-control-label" for="dark-mode-input">Dark Mode</label>
-              </span></a></li>
+            <li><button id="dark-toggle">  Change Theme</button> </a></li>
           </ul>
         </nav>
+      </div>
       </div>
     </div>
     <div class="right-side">
         
-        <div id="first"> 
-                  <table>
+        <div class = "table-prop"> 
+                  <table class="tableBox">
                     <tr>
                       <td colspan="3">         <h1 class="uppercase italics">Education</h1>
 </td>
@@ -78,7 +79,7 @@
               <td>Always</td>
             </tr>
           </table>
-          <table>
+          <table class="tableBox">
                       <td colspan="3">         <h1 class="uppercase italics">Work Experience</h1>
 </td>
                     </tr>
@@ -113,7 +114,7 @@
               <td>06/21 - 08/21</td>
             </tr>
           </table>
-          <table>
+          <table class="tableBox">
                       <td colspan="3">         <h1 class="uppercase italics">Projects</h1>
 </td>
                     </tr>
@@ -148,7 +149,7 @@
               <td>01/22 - 05/22</td>
             </tr>
           </table>
-                    <table>
+                    <table class="tableBox">
                       <td colspan="2">         <h1 class="uppercase italics">Skills</h1>
 </td>
                     </tr>
@@ -174,4 +175,70 @@
       </div>
     </div>
   </body>
+  <script>
+    function changeText(text){
+      const student = document.getElementById("student")
+      const researcher= document.getElementById("researcher")
+      const tinkerer= document.getElementById("tinkerer")
+
+      if (text == "student"){
+        student.innerHTML = "Procrastinator"
+      }
+      else if(text == "researcher"){
+        researcher.innerHTML = "Web Addict"
+      }
+      else if(text == "tinkerer"){
+        tinkerer.innerHTML = "Breaker of Things"
+      }
+    }
+
+    function changeBackText(text){
+      const student = document.getElementById("student")
+      const researcher= document.getElementById("researcher")
+      const tinkerer= document.getElementById("tinkerer")
+
+      if (text == "procrastinator"){
+        student.innerHTML = "Student"
+      }
+      else if(text == "web addict"){
+        researcher.innerHTML = "Researcher"
+      }
+      else if(text == "breaker of things"){
+        tinkerer.innerHTML = "Tinkerer"
+      }
+    }
+
+    function darkModeToggle(){
+      const left = document.getElementById("left");
+      const right = document.querySelectorAll(".tableBox");
+      for (element of right) {
+        console.log("hi")
+        element.classList.toggle("dark-mode-semi"); }
+      // console.log(left)
+      left.classList.toggle("dark-mode-full");
+      
+    }
+
+    document.getElementById("student").onmouseover = function(){
+      changeText("student")
+    }
+        document.getElementById("student").onmouseleave = function(){
+      changeBackText("procrastinator")
+    }
+        document.getElementById("researcher").onmouseover = function(){
+      changeText("researcher")
+    }
+        document.getElementById("researcher").onmouseleave = function(){
+      changeBackText("web addict")
+    }
+            document.getElementById("tinkerer").onmouseover = function(){
+      changeText("tinkerer")
+    }
+        document.getElementById("tinkerer").onmouseleave = function(){
+      changeBackText("breaker of things")
+    }
+    document.getElementById("dark-toggle").onclick = function(){
+      darkModeToggle();
+    }
+  </script>
 </html>

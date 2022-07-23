@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me</title>
+    <title>alanx.me | About Me</title>
+      <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="styles/style.css">
     <link rel='stylesheet' media='handheld, only screen and (max-device-width: 800px)' href='styles/phone.css'>
 
@@ -16,10 +17,9 @@
     </style>
   </head>
   <body class="container">
-    <div class="left-side">
+    <div class="left-side"  id="left">
       <div>
-        <p class="uppercase">Student, Researcher, Tinkerer</p>
-      </div>
+        <p class="uppercase italics"> <span id="student"> Student</span>, <span id="researcher">Researcher</span>, <span id="tinkerer">Tinkerer</span></p>      </div>
       <div class="id-statement">
         <a href="/"><h1 class="bigwords">Alan Xian</h1></a>
       </div>
@@ -31,18 +31,94 @@
             <li><a href="/about-me"> <b>About Me</b></a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="/sitemap">Sitemap</a></li>
+            <li><button id="dark-toggle">  Change Theme</button> </a></li>
           </ul>
         </nav>
       </div>
     </div>
     <div class="right-side">
-        <div id="myquote">
-        <h3>My World</h3>
+        <div>
+          <table class="tableBox">
+            <tr>
+
+        <th>My World</th>
+          </tr>
+          <tr>
+            <td>
         <p>
-             "Hello world! My name is Alan Xian and I am a rising sophomore at Babson! I originiate from the land of good weather, delicious tacos, and high taxes - Los Angeles. I'm currently on summer break right now living my best life. And by that, I mean taking extra classes and working a full-time job. That's about it!"
-        </p>
+             "Hello world! My name is Alan Xian and I am a rising sophomore at Babson!  I originiate from a land of good <br> weather, delicious tacos, and high taxes. I'm currently on summer break right now living my best life. <br> And by that, I mean taking extra classes and working a full-time job. That's about it!"
+        </p></td></tr>
+        </td>
+
+        </table>
     </div>
       </div>
     </div>
   </body>
+    <script>
+    function changeText(text){
+      const student = document.getElementById("student")
+      const researcher= document.getElementById("researcher")
+      const tinkerer= document.getElementById("tinkerer")
+
+      if (text == "student"){
+        student.innerHTML = "Procrastinator"
+      }
+      else if(text == "researcher"){
+        researcher.innerHTML = "Web Addict"
+      }
+      else if(text == "tinkerer"){
+        tinkerer.innerHTML = "Breaker of Things"
+      }
+    }
+
+    function changeBackText(text){
+      const student = document.getElementById("student")
+      const researcher= document.getElementById("researcher")
+      const tinkerer= document.getElementById("tinkerer")
+
+      if (text == "procrastinator"){
+        student.innerHTML = "Student"
+      }
+      else if(text == "web addict"){
+        researcher.innerHTML = "Researcher"
+      }
+      else if(text == "breaker of things"){
+        tinkerer.innerHTML = "Tinkerer"
+      }
+    }
+
+    function darkModeToggle(){
+      const left = document.getElementById("left");
+      const right = document.querySelectorAll(".tableBox");
+      for (element of right) {
+        console.log("hi")
+        element.classList.toggle("dark-mode-semi"); }
+      // console.log(left)
+      left.classList.toggle("dark-mode-full");
+      
+    }
+
+    document.getElementById("student").onmouseover = function(){
+      changeText("student")
+    }
+        document.getElementById("student").onmouseleave = function(){
+      changeBackText("procrastinator")
+    }
+        document.getElementById("researcher").onmouseover = function(){
+      changeText("researcher")
+    }
+        document.getElementById("researcher").onmouseleave = function(){
+      changeBackText("web addict")
+    }
+            document.getElementById("tinkerer").onmouseover = function(){
+      changeText("tinkerer")
+    }
+        document.getElementById("tinkerer").onmouseleave = function(){
+      changeBackText("breaker of things")
+    }
+    document.getElementById("dark-toggle").onclick = function(){
+      darkModeToggle();
+    }
+  </script>
 </html>
