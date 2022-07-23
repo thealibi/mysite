@@ -6,24 +6,26 @@ body {
 }
 
 .container {
-  display: block;
+  display: flex;
   height: 100%;
   min-height: 100%;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  background-size: contain;
 }
 .left-side {
-  background: rgba(255, 255, 255, 0.95);
+  background-color: white;
   text-align: center;
   padding: 20px;
+  justify-content: space-evenly;
 }
 .right-side {
   background-blend-mode: overlay;
   flex: 1;
   min-height: 100vh;
   color: black;
-  background-size: auto;
   justify-content: center;
+  display: flex;
 }
 
 .contact-form {
@@ -31,13 +33,13 @@ body {
   text-align: center;
 }
 ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: center;
   align-items: center;
-  overflow: auto;
 }
 
 li {
@@ -51,13 +53,13 @@ a {
 
 li a {
   display: block;
-  /* padding: 0.7em; */
+  padding: 0.7em;
   text-align: center;
   margin-bottom: 0.2em;
   width: 8em;
 }
 .bigwords {
-  font-size: 50px;
+  font-size: 56px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .uppercase {
@@ -67,7 +69,7 @@ li a {
   background-color: LightCoral;
 }
 .id-statement {
-  padding: 10px 10px 10px;
+  padding: 160px 35px 150px;
 }
 .nav a {
   color: rgb(82, 82, 82);
@@ -90,21 +92,33 @@ form {
 }
 
 table {
-  background: rgba(255, 255, 255, 0.8);
   text-align: left;
-  padding: 10px;
+  padding: 21px;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  max-width: 100%;
 }
 th {
   padding-bottom: 1em;
-  padding-right: 3em;
   text-decoration: underline;
 }
 tr,
 td {
-  padding: 1em 1em 1em 0em;
+  padding: 0.8em 2em 0em 0em;
 }
 .first {
-  padding: 10px 0px 0px 0px;
   align-items: center;
   justify-content: center;
+}
+
+h1 {
+  margin-top: 1px;
+}
+
+p {
+  color: #000000;
+}
+
+#dark-mode-input {
+  display: none !important;
 }

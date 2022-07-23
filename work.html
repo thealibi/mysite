@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Work</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" id="stylesheet" href="styles/style-light.css">
     <link rel='stylesheet' media='handheld, only screen and (max-device-width: 800px)' href='styles/phone.css'>
 
     <style>
@@ -31,6 +31,10 @@
             <li><a href="/about-me">About Me</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="/sitemap">Sitemap</a></li>
+            <li><span class="dark-mode"> <a href="">
+                <input type="checkbox" id="dark-mode-input">
+                <label class="custom-control-label" for="dark-mode-input">Dark Mode</label>
+              </span></a></li>
           </ul>
         </nav>
       </div>
@@ -38,23 +42,25 @@
     <div class="right-side">
         
         <div id="first"> 
-            <h1 class="uppercase italics">Education</h1>
                   <table>
                     <tr>
-                      <td colspan="3"></td>
+                      <td colspan="3">         <h1 class="uppercase italics">Education</h1>
+</td>
                     </tr>
             <tr>
-              <th>Institution</th>
-              <th>Pursuing</th>
-              <th>Years</th>
+              <th class="uppercase">Institution</th>
+              <th class="uppercase">Pursuing</th>
+              <th class="uppercase">Years</th>
             </tr>
             <tr>
 
-             <td><a href="https://babson.edu">Babson College</a>
+             <td>
+              
+              <a href="https://babson.edu">Babson College</a></span>
                 </td>
-             <td>Bachelors of Business Administration in Business Analytics and Operations</td>
+             <td>Bachelors of Business Administration in Business Analytics & Tech Entrepreneurship</td>
                 <td>
-                    08/21 - 06/24
+                    08/21 - Ongoing
                 </td>
             </tr>
             <tr>
@@ -62,11 +68,113 @@
                 <a href="https://olin.edu">Olin College</a>
                 </td>
               <td>Pursuing Engineering Certificate focusing on Software Development</td>
-              <td>08/22 - 06/24</td>
+              <td>08/22 - Ongoing</td>
             </tr>
+            <tr>
+              <td>
+                <a href="https://yewtu.be">YouTube</a>
+                </td>
+              <td>Watching videos and courses to further knowledge of tech and business worlds</td>
+              <td>Always</td>
+            </tr>
+          </table>
+          <table>
+                      <td colspan="3">         <h1 class="uppercase italics">Work Experience</h1>
+</td>
+                    </tr>
+                    <tr>
+              <th class="uppercase">Company</th>
+              <th class="uppercase">Description</th>
+              <th class="uppercase">Years</th>
+            </tr>
+            <tr>
+
+             <td>
+              
+              <a href="https://getzuma.com">Zuma</a></span>
+                </td>
+             <td>Operations and Product Intern at a16z/Ycombinator-backed property-tech startup</td>
+                <td>
+                    05/22 - Ongoing
+                </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://blogs.babson.edu/social/2016/02/11/amplifying-entrepreneurial-education-in-tanzania/">Babson College</a>
+                </td>
+              <td>Virtual Instructor for Tanzania Youth Entrepreneurship Program</td>
+              <td>03/22 - 05/22</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://premioinc.com">Premio Inc.</a>
+                </td>
+              <td>Marketing Intern for embedded electronics and computer manufacterer</td>
+              <td>06/21 - 08/21</td>
+            </tr>
+          </table>
+          <table>
+                      <td colspan="3">         <h1 class="uppercase italics">Projects</h1>
+</td>
+                    </tr>
+                    <tr>
+              <th class="uppercase">Name</th>
+              <th class="uppercase">Description</th>
+              <th class="uppercase">Years</th>
+            </tr>
+            <tr>
+
+             <td>
+              
+              <a href="https://trimalerts.com">TrimAlerts</a></span>
+                </td>
+             <td>Developed website and SMS service to alert students of the daily dining menu</td>
+                <td>
+                    05/22 - Ongoing
+                </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.babson.edu/undergraduate/academics/curriculum/foundations-of-management-and-entrepreneurship/">Foldi</a>
+                </td>
+              <td>Student-led furniture startup part of Babson FME Program | IT and Accouting Leads</td>
+              <td>08/21 - 05/22</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="">Class Projects</a>
+                </td>
+              <td>Brain-Computer Interfaces & Classical machine learning analysis for sports records</td>
+              <td>01/22 - 05/22</td>
+            </tr>
+          </table>
+                    <table>
+                      <td colspan="2">         <h1 class="uppercase italics">Skills</h1>
+</td>
+                    </tr>
+
+            <tr>
+
+             <td>
+              
+              Techincal
+                </td>
+             <td>Tableau, Rlang, Python, Pandas, JavaScript, HTML/CSS, MongoDB, Excel Modeling, Web Scraping, and OSINT </td>
+
+            </tr>
+            <tr>
+              <td>
+                 Other
+                </td>
+              <td>Project Management, Agile Methodology, Adobe Suite, Film Production, Travel Hacking, Drinking Lots Of Tea </td>
+            </tr>
+
           </table>
           </div>
       </div>
     </div>
   </body>
+  <script>
+document.getElementById('stylesheet').href='styles/style-dark.css';
+  </script>
 </html>
